@@ -15,6 +15,54 @@ userRouter.post('/',
   (req, res) => createUserController.execute(req, res)
 );
 
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     User:
+ *       type: object
+ *       required:
+ *        - isAdminUser
+ *        - isDeleted
+ *        - isEmailVerified
+ *        - username
+ *       properties:
+ *         isAdminUser:
+ *           type: boolean
+ *           description: true if user is admin
+ *         isDeleted:
+ *           type: boolean
+ *           description: true if user is deleted
+ *         isEmailVerified:
+ *           type: boolean
+ *           description: true if user has verified email
+ *         username:
+ *           type: string
+ *           description: The user's username
+ *       example:
+ *          isAdminUser: false
+ *          isDeleted: false
+ *          isEmailVerified: false
+ *          username: 'atb'
+ */
+
+/**
+ * @swagger
+ * tags:
+ *   name: Users
+ *   description: The user managing API
+ * /users/me:
+ *   get:
+ *     summary: get the current user
+ *     responses:
+ *       200:
+ *         description: The current user
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/User'
+ */
 userRouter.get('/me',
   middleware.ensureAuthenticated(),
   (req, res) => getCurrentUserController.execute(req, res)

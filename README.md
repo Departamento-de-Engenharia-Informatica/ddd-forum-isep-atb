@@ -195,3 +195,16 @@ Examples of using the API (without authentication, using postman)
 
     docker-compose stop
 
+### API Documentation 
+
+  TODO: Add API documentation as described in https://blog.logrocket.com/documenting-express-js-api-swagger/
+
+  See also:
+    https://github.com/diogosouza/simple-express-crud-api/tree/master - for the example API
+    https://github.com/ganeshmani/swagger-nodejs-tutorial - for the API with swagger
+
+  **1. Add dependencies**
+
+  Execute:
+
+    npm install swagger-jsdoc swagger-ui-express
