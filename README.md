@@ -197,14 +197,28 @@ Examples of using the API (without authentication, using postman)
 
 ### API Documentation 
 
-  TODO: Add API documentation as described in https://blog.logrocket.com/documenting-express-js-api-swagger/
+  **Using JsDoc and Swagger to document the API**
+  https://blog.logrocket.com/documenting-express-js-api-swagger/
 
-  See also:
-    https://github.com/diogosouza/simple-express-crud-api/tree/master - for the example API
-    https://github.com/ganeshmani/swagger-nodejs-tutorial - for the API with swagger
+  https://github.com/diogosouza/simple-express-crud-api/tree/master - for the example API
+    
+  https://github.com/ganeshmani/swagger-nodejs-tutorial - for the API with swagger
+    
+  **Automatic generation of swagger documentation from the code**
+  https://www.npmjs.com/package/swagger-autogen - for the swagger autogen, a tool to generate swagger documentation from the code
 
   **1. Add dependencies**
 
   Execute:
 
     npm install swagger-jsdoc swagger-ui-express
+
+    npm install --save-dev swagger-autogen
+
+  **2. Generate swagger documentation**
+
+    node ./src/swagger.js
+
+  **3. Access the swagger documentation**
+
+  If you run the backend the API will be available at http://localhost:5001/api/v1/api-docs

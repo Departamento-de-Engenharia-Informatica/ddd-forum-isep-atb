@@ -9,6 +9,7 @@ import { isProduction } from '../../../config';
 
 const swaggerJsdoc = require("swagger-jsdoc"),
   swaggerUi = require("swagger-ui-express");
+  const swaggerFile = require('../../../swagger-output.json')
 
 const origin = {
   // origin: isProduction ? 'https://dddforum.com' : '*',
@@ -26,6 +27,7 @@ app.use(morgan('combined'))
 
 app.use('/api/v1', v1Router)
 
+/* for swagger jsdoc 
 // Swagger
 const options = {
   definition: {
@@ -64,6 +66,10 @@ app.use(
       "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-newspaper.css",
   })
 );
+*/
+
+// Swagger
+app.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 const port = process.env.PORT || 5001;
 

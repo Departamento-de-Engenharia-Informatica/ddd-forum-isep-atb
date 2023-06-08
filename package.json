@@ -92,6 +92,7 @@
   "devDependencies": {
     "concurrently": "^5.0.0",
     "dotenv-cli": "^5.1.0",
-    "husky": "^4.2.3"
+    "husky": "^4.2.3",
+    "swagger-autogen": "^2.23.1"
   }
 }
