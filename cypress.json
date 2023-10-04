@@ -1,0 +1,6 @@
+{
+    "testFiles": "**/*.feature",
+    "chromeWebSecurity": false,
+    "video": false,
+    "numTestsKeptInMemory": 0
+  }

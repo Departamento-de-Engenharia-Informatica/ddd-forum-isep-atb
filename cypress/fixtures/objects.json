@@ -1,0 +1,11 @@
+{
+    "bookmark": {
+      "mainButton": ".bookmark-button:visible",
+      "iframe": ".bookmark-modal__frame",
+      "frameId": ".bookmark-modal__frame",
+      "close": ".bookmark-modal__close",
+      "backdrop": ".bookmark-modal__backdrop",
+      "count": ".bookmark-button__count"
+    },
+    "taskCompletion": ".bp-taskcompletion"
+  }

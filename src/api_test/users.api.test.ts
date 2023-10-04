@@ -2,7 +2,17 @@
  *
  * @remarks
  * This code is based on the project {@link https://github.com/jmfiola/jest-api-test-typescript-example}.
+ * Ver exemplo: https://github.com/abrahamberg/mock-typescript-class-sample/tree/main
 */
+/** for mocking axios in jest */
+/* jest.mock('./restClient/RestClient'); */
+import axios, { AxiosResponse } from "axios";
+import RestClient from "./restClient/RestClient";
+/*jest.mock('restClient/RestClient'); */
+// const mockRestClient = jest.genMockFromModule()
+//const mockedAxios = axios as jest.Mocked<typeof axios>;
+/** for mocking axios in jest */
+
 import { Logger } from "tslog";
 import ConfigHandler from "./config/ConfigHandler";
 
@@ -29,9 +39,25 @@ describe("Users endpoint", (): void => {
   });
 
   it("Post - Create User", async (): Promise<void> => {
+    // Given
+    //Prepare the response we want to get from axios
+    const expectedResponse: AxiosResponse = {
+      data: "",
+      status: 200,
+      statusText: 'OK',
+      headers: {},
+      config: {},
+    };
+    /*const mockedRestClient = axios as jest.Mocked<typeof axios>;
+
+    mockedAxios.post.mockResolvedValueOnce(expectedResponse);*/
+ 
+    // When
     const response = await users.post();
 
-    expect(response.status).toBe(200);    
+    // Then
+    expect(axios.post).toHaveBeenCalled();
+    expect(response.status).toBe(expectedResponse.status);    
   });
 
   it("Post Login", async (): Promise<void> => {

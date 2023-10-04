@@ -1,27 +1,39 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "command": "npm run test -- --runInBand",
-        "name": "Run npm test",
-        "request": "launch",
-        "type": "node-terminal"
-      },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug TypeScript in Node.js",
-            "preLaunchTask": "npm: build",
-            "program": "${workspaceFolder}/src/index.ts",
-            "outFiles": [
-              "${workspaceFolder}/dist/**/*.js"
-            ],
-            "sourceMaps": true,
-            "smartStep": true,
-            "internalConsoleOptions": "openOnSessionStart",
-            "env": {
-              "NODE_ENV": "development"
-            }
-          }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Jest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--inspect-brk",
+        "${workspaceRoot}/node_modules/.bin/jest",
+        "--runInBand"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "command": "npm run test -- --runInBand",
+      "name": "Run npm test",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug TypeScript in Node.js",
+      "preLaunchTask": "npm: build",
+      "program": "${workspaceFolder}/src/index.ts",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "smartStep": true,
+      "internalConsoleOptions": "openOnSessionStart",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
 }

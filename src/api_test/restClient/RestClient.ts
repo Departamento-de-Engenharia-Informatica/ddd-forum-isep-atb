@@ -37,6 +37,10 @@ export class RestClient {
     this.axiosInstance = axios.create({ baseURL: baseUrl });
   }
 
+  public getAxiosInstance(): AxiosInstance  {
+    return this.axiosInstance;
+  }
+
   private httpsAgent = new https.Agent({
     rejectUnauthorized: false,
   });

@@ -4,6 +4,7 @@
  * This code is based on the project {@link https://github.com/jmfiola/jest-api-test-typescript-example}.
 */
 import { Logger } from "tslog";
+import { AxiosInstance } from "axios";
 
 import ConfigHandler from "../../config/ConfigHandler";
 import  { RestClient }  from "../../restClient/RestClient";
@@ -17,6 +18,9 @@ export abstract class AEndpoint {
     this.log.info(`The Service URL for ${this.serviceName} is ${this.url}`);
   }
 
+  public getAxiosInstance(): AxiosInstance  {
+    return this.restClient.getAxiosInstance();
+  }
   public createdItemIds: Set<string> = new Set();
 
   protected config = ConfigHandler.getInstance();

@@ -222,3 +222,51 @@ Examples of using the API (without authentication, using postman)
   **3. Access the swagger documentation**
 
   If you run the backend the API will be available at http://localhost:5001/api/v1/api-docs
+
+### Jest with Typescript 
+
+  npm install --save-dev babel-jest @babel/core @babel/preset-env
+
+### Cypress
+
+  An example of using Cypress with Cucumber with Node 12.x: https://github.com/BirgitPohl/cypress-cucumber-setup/
+
+  **To install Cypress with Cucumber (with Node 12.x):**
+  
+    npm install cypress@6.0.1 --save-dev
+    npm install cypress-cucumber-preprocessor@4.0.0  --save-dev
+
+  To open the Cypress interactive environment:
+  
+      npx cypress open
+
+  To run Cypress tests in CLI:
+
+      npx cypress run
+
+  Possible way to generate HTML reports: https://dzone.com/articles/cypress-generate-html-results-with-screenshot
+  
+  **The following information may regard only Cypress incomplatible with Node 12.x**  
+  To install Cypress:
+
+    npm install cypress --save-dev
+
+  **Note:** Warnnings will appear because Cypress 13.3.0 requires Node 18.0.0 or above. We are using Node 12.22.12. Will this be a problem?
+
+  Simple example: https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
+
+  Example of using the Cucumber plugin in Cypress: https://github.com/atb/base-cypress-cucumber-typescript
+
+  The Cucumber plugin: https://github.com/badeball/cypress-cucumber-preprocessor
+
+  To install de Cucumber plugin:
+
+    $ npm install @badeball/cypress-cucumber-preprocessor
+
+  The cucumber plugin documentation: https://github.com/badeball/cypress-cucumber-preprocessor/blob/master/docs/readme.md
+
+
+
+
+
+

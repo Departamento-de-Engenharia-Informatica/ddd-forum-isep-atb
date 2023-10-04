@@ -25,12 +25,6 @@
     "test:dev": "jest --watchAll",
     "testWithCoverage": "jest --coverage"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build",
-      "pre-push": "npm run build"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stemmlerjs/ddd-forum.git"
@@ -85,12 +79,17 @@
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "tslog": "3.2.2",
-    "typescript": "^3.6.3",
+    "typescript": "^3.9.10",
     "validator": "^11.1.0",
     "yaml": "^1.10.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
+    "babel-jest": "^29.7.0",
     "concurrently": "^5.0.0",
+    "cypress": "^6.0.1",
+    "cypress-cucumber-preprocessor": "^4.0.0",
     "dotenv-cli": "^5.1.0",
     "husky": "^4.2.3",
     "swagger-autogen": "^2.23.1"
