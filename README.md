@@ -246,12 +246,12 @@ Examples of using the API (without authentication, using postman)
 
   Possible way to generate HTML reports: https://dzone.com/articles/cypress-generate-html-results-with-screenshot
   
-  **The following information may regard only Cypress incomplatible with Node 12.x**  
+  **ATTENTION: The following information may regard only Cypress incompatible with Node 12.x**  
   To install Cypress:
 
     npm install cypress --save-dev
 
-  **Note:** Warnnings will appear because Cypress 13.3.0 requires Node 18.0.0 or above. We are using Node 12.22.12. Will this be a problem?
+  **Note:** Warnings will appear because Cypress 13.3.0 requires Node 18.0.0 or above. We are using Node 12.22.12. Will this be a problem?
 
   Simple example: https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test
 
