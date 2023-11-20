@@ -6,7 +6,7 @@
 import { Logger } from "tslog";
 import { AxiosInstance } from "axios";
 
-import ConfigHandler from "../../config/ConfigHandler";
+import ConfigHandler from "../../config/configHandler";
 import  { RestClient }  from "../../restClient/RestClient";
 
 export abstract class AEndpoint {

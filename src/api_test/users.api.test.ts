@@ -14,7 +14,7 @@ import RestClient from "./restClient/RestClient";
 /** for mocking axios in jest */
 
 import { Logger } from "tslog";
-import ConfigHandler from "./config/ConfigHandler";
+import ConfigHandler from "./config/configHandler";
 
 import Users from "./endpoints/Users";
 
