@@ -23,4 +23,6 @@ jobs:
 
     - name: Wait a little
       run: sleep 10
-      
+
+    - name: Setup dev
+      run: npm run setup:dev
