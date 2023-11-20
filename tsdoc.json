@@ -1,0 +1,37 @@
+{
+	"tags":
+	{
+		"allowUnknownTags" : true
+	},
+	"plugins":[
+		 "plugins/markdown"
+		,"/Users/alexandrebraganca/.nvm/versions/node/v12.22.12/lib/node_modules/tsdoc/template/plugins/TSDoc.js"
+	],
+	"opts":
+	{
+		"template"	:"/Users/alexandrebraganca/.nvm/versions/node/v12.22.12/lib/node_modules/tsdoc/template",
+		"recurse"	:"true"
+	},
+	"templates" : {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false
+	},
+	"source":
+	{
+		"includePattern": "(\\.d)?\\.ts$"
+	},
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	},
+	"tsdoc":{
+		"source"		:"/Users/alexandrebraganca/repositories/switch-qa/ddd-forum-isep-atb/src/",
+		"destination"	:"/Users/alexandrebraganca/repositories/switch-qa/ddd-forum-isep-atb/docs",
+		"tutorials"		:"",
+		"systemName"	: "ddd-forum-isep-atb",
+		"footer"		: "",
+		"copyright"		: "ddd-forum-isep-atb Copyright © 2023 alexandrebraganca.",
+		"outputSourceFiles" : true,
+		"commentsOnly": true
+	}
+}

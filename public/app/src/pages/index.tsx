@@ -5,7 +5,7 @@ import Header from '../shared/components/header/components/Header';
 import PostFilters, { PostFilterType } from '../modules/forum/components/posts/filters/components/PostFilters';
 import { Post } from '../modules/forum/models/Post';
 import { DateUtil } from '../shared/utils/DateUtil';
-import { PostRow } from '../modules/forum/components/posts/postRow';
+//import { PostRow } from '../modules/forum/components/posts/postRow';
 import { ProfileButton } from '../modules/users/components/profileButton';
 import { UsersState } from '../modules/users/redux/states';
 //@ts-ignore
@@ -17,6 +17,7 @@ import { User } from '../modules/users/models/user';
 import withLogoutHandling from '../modules/users/hocs/withLogoutHandling';
 import { ForumState } from '../modules/forum/redux/states';
 import withVoting from '../modules/forum/hocs/withVoting';
+import { PostRow } from '../modules/forum/components/posts/postRow';
 
 interface IndexPageProps extends usersOperators.IUserOperators, forumOperators.IForumOperations {
   users: UsersState;
@@ -101,7 +102,7 @@ class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
   render () {
     console.log(this.props)
     const { activeFilter } = this.state;
-
+    
     return (
       <Layout>
         <div className="header-container flex flex-row flex-center flex-even">
@@ -123,13 +124,14 @@ class IndexPage extends React.Component<IndexPageProps, IndexPageState> {
           onClick={(filter) => this.setActiveFilter(filter)}
         />
 
-        {this.getPostsFromActiveFilterGroup().map((p, i) => (
+        {
+          this.getPostsFromActiveFilterGroup().map((p, i) => (
           <PostRow
             key={i}
             onUpvoteClicked={() => this.props.upvotePost(p.slug)}
             onDownvoteClicked={() => this.props.downvotePost(p.slug)}
             isLoggedIn={this.props.users.isAuthenticated}
-            {...p}
+            { ...p  }
           />
         ))}
 

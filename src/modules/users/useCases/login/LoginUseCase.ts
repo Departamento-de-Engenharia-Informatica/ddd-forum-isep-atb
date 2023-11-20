@@ -19,6 +19,9 @@ type Response = Either<
   Result<LoginDTOResponse>
 >
 
+/**
+ * @desc Login User
+ */
 export class LoginUserUseCase implements UseCase<LoginDTO, Promise<Response>> {
   private userRepo: IUserRepo;
   private authService: IAuthService;

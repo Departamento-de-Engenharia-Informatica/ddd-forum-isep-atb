@@ -22,7 +22,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Debug TypeScript in Node.js",
+      "name": "Debug Backend TypeScript in Node.js",
       "preLaunchTask": "npm: build",
       "program": "${workspaceFolder}/src/index.ts",
       "outFiles": [

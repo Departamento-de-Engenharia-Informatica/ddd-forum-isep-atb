@@ -1,6 +1,7 @@
 {
-    "testFiles": "**/*.feature",
-    "chromeWebSecurity": false,
-    "video": false,
-    "numTestsKeptInMemory": 0
-  }
+  "testFiles": "**/*.feature",
+  "chromeWebSecurity": false,
+  "video": false,
+  "numTestsKeptInMemory": 0,
+  "projectId": "y4anf8"
+}

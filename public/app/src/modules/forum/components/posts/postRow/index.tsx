@@ -1,5 +1,5 @@
 
-import PostRow from "./components/PostRow";
+import PostRow from "./components/PostRow2";
 
 export {
   PostRow
