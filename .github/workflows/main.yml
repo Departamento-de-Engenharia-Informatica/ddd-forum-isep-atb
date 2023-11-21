@@ -33,3 +33,18 @@ jobs:
 
     - name: Setup dev
       run: npm run setup:dev
+
+    - name: start backend
+      run: npm run start:dev &
+
+    - name: start frontend
+      run: BROWSER=none npm run start:public &
+
+    - name: Wait a little
+      run: sleep 10
+      
+    - name: Check http status code of pages
+      uses: lakuapik/gh-actions-http-status@v1
+      with:
+        sites: '["http://localhost:3000", "http://localhost:3000/join"]'
+        expected: '[200, 200]'
