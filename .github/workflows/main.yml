@@ -35,10 +35,10 @@ jobs:
       run: npm run setup:dev
 
     - name: start backend
-      run: npm run start:dev
+      run: npm run start:dev &
 
     - name: start frontend
-      run: npm run start:public
+      run: npm run start:public &
 
     - name: Wait a little
       run: sleep 10
