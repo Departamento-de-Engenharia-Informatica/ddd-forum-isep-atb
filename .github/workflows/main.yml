@@ -38,7 +38,7 @@ jobs:
       run: npm run start:dev &
 
     - name: start frontend
-      run: npm run start:public &
+      run: BROWSER=none npm run start:public &
 
     - name: Wait a little
       run: sleep 10
